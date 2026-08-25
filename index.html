@@ -11,13 +11,13 @@
   <meta property="og:description" content="Protección clara, personalizada y con respaldo constante.">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="es_MX">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 64 64%22><rect width=%2264%22 height=%2264%22 rx=%2216%22 fill=%22%230b1f3a%22/><path d=%22M32 11 49 18v13c0 11-7 18-17 23-10-5-17-12-17-23V18l17-7Z%22 fill=%22none%22 stroke=%22%23e6423a%22 stroke-width=%224%22/><path d=%22M25 23h7c7 0 11 4 11 9s-4 9-11 9h-7V23Zm7 13c4 0 6-1 6-4s-2-4-6-4h-2v8h2Z%22 fill=%22white%22/></svg>">
+  <link rel="icon" type="image/png" href="assets/logo-dessavre-simplificado.png">
   <style>
     :root {
       --navy: #0b1f3a;
       --navy-2: #15345c;
-      --red: #d63b35;
-      --red-dark: #b72e29;
+      --red: #d81e05;
+      --red-dark: #b71904;
       --ink: #172033;
       --muted: #5e6878;
       --line: #dfe4ea;
@@ -66,10 +66,8 @@
       letter-spacing: .13em;
       text-transform: uppercase;
     }
-    .eyebrow::before { width: 28px; height: 2px; background: currentColor; content: ""; }
     .section-head { max-width: 700px; margin-bottom: 42px; }
     .section-head.center { margin-inline: auto; text-align: center; }
-    .section-head.center .eyebrow::before { display: none; }
     h1, h2, h3, p { margin-top: 0; }
     h1, h2, h3 { color: var(--navy); line-height: 1.08; letter-spacing: -.035em; }
     h1 { max-width: 720px; margin-bottom: 24px; font-size: clamp(2.7rem, 6vw, 5.6rem); }
@@ -106,17 +104,14 @@
     .nav { min-height: 78px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
     .brand { display: inline-flex; align-items: center; gap: 12px; color: var(--navy); font-weight: 850; line-height: 1.05; text-decoration: none; }
     .brand-mark {
-      width: 42px;
-      height: 46px;
-      display: grid;
+      width: 50px;
+      height: 50px;
       flex: 0 0 auto;
-      place-items: center;
-      color: var(--white);
+      overflow: hidden;
       background: var(--navy);
-      border: 2px solid var(--red);
-      border-radius: 15px 15px 19px 19px;
-      font-size: 1.28rem;
+      border-radius: 14px;
     }
+    .brand-mark img { width: 100%; height: 100%; max-width: none; object-fit: cover; object-position: 42% center; mix-blend-mode: screen; }
     .brand small { display: block; margin-top: 4px; color: var(--muted); font-size: .66rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
     .desktop-nav { display: flex; align-items: center; gap: 28px; }
     .desktop-nav > a:not(.button) { color: #465064; font-size: .94rem; font-weight: 700; text-decoration: none; }
@@ -143,7 +138,7 @@
     .hero::after { width: 360px; height: 360px; right: 8%; bottom: -260px; }
     .hero-grid { position: relative; z-index: 1; min-height: 680px; display: grid; grid-template-columns: minmax(0, 1.45fr) minmax(300px, .55fr); align-items: center; gap: 70px; padding-block: 88px; }
     .hero h1 { color: var(--white); }
-    .hero .eyebrow { color: #ff8a82; }
+    .hero .eyebrow { color: #ff7462; }
     .hero .lead { margin-bottom: 32px; color: #ccd6e4; }
     .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; }
     .trust-row { display: flex; flex-wrap: wrap; gap: 22px; margin-top: 48px; color: #dbe3ee; font-size: .9rem; font-weight: 700; }
@@ -216,8 +211,6 @@
     .campaign.featured { grid-column: 1 / -1; }
     .campaign video { width: 100%; aspect-ratio: 16 / 9; background: #050d19; object-fit: cover; }
     .campaign.featured video { aspect-ratio: 2.4 / 1; }
-    .campaign figcaption { display: flex; align-items: center; justify-content: space-between; gap: 18px; padding: 16px 18px; color: #cdd8e6; font-size: .9rem; }
-    .campaign figcaption strong { color: var(--white); }
     .campaign-note { margin: 28px 0 0; color: #aebed0; font-size: .88rem; }
     .social { padding: 105px 0; background: var(--soft); }
     .social-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
@@ -283,7 +276,7 @@
   <header class="site-header">
     <nav class="container nav" aria-label="Navegación principal">
       <a class="brand" href="#inicio" aria-label="Dessavre, inicio">
-        <span class="brand-mark" aria-hidden="true">D</span>
+        <span class="brand-mark" aria-hidden="true"><img src="assets/logo-dessavre-simplificado.png" alt=""></span>
         <span>Asesores de Seguros Dessavre S.C.<small>Protección con respaldo</small></span>
       </a>
       <div class="desktop-nav">
@@ -311,7 +304,7 @@
     <section class="hero" id="inicio">
       <div class="container hero-grid">
         <div>
-          <p class="eyebrow">Asesoría de seguros en Jalisco</p>
+          <p class="eyebrow">Asesoría de seguros</p>
           <h1>Protegemos lo que construyes.</h1>
           <p class="lead">Decisiones claras, coberturas a tu medida y acompañamiento personal cuando más lo necesitas.</p>
           <div class="hero-actions">
@@ -406,24 +399,19 @@
         </div>
         <div class="campaign-grid">
           <figure class="campaign featured">
-            <video controls muted playsinline preload="metadata" poster="assets/publicidad/campana-01.jpg" aria-label="Campaña informativa 1"><source src="https://files.catbox.moe/y3zkpx.mp4" type="video/mp4"></video>
-            <figcaption><strong>Campaña informativa 01</strong><span>Video</span></figcaption>
+            <video controls autoplay muted loop playsinline preload="auto" poster="assets/publicidad/campana-01.jpg" aria-label="Campaña informativa 1"><source src="https://files.catbox.moe/y3zkpx.mp4" type="video/mp4"></video>
           </figure>
           <figure class="campaign">
-            <video controls muted playsinline preload="metadata" poster="assets/publicidad/campana-02.jpg" aria-label="Campaña informativa 2"><source src="https://files.catbox.moe/y8v94u.mp4" type="video/mp4"></video>
-            <figcaption><strong>Campaña informativa 02</strong><span>Video</span></figcaption>
+            <video controls autoplay muted loop playsinline preload="auto" poster="assets/publicidad/campana-02.jpg" aria-label="Campaña informativa 2"><source src="https://files.catbox.moe/y8v94u.mp4" type="video/mp4"></video>
           </figure>
           <figure class="campaign">
-            <video controls muted playsinline preload="metadata" poster="assets/publicidad/campana-03.jpg" aria-label="Campaña informativa 3"><source src="https://files.catbox.moe/n71739.mp4" type="video/mp4"></video>
-            <figcaption><strong>Campaña informativa 03</strong><span>Video</span></figcaption>
+            <video controls autoplay muted loop playsinline preload="auto" poster="assets/publicidad/campana-03.jpg" aria-label="Campaña informativa 3"><source src="https://files.catbox.moe/n71739.mp4" type="video/mp4"></video>
           </figure>
           <figure class="campaign">
-            <video controls muted playsinline preload="metadata" poster="assets/publicidad/campana-04.jpg" aria-label="Campaña informativa 4"><source src="https://files.catbox.moe/kku6ii.mp4" type="video/mp4"></video>
-            <figcaption><strong>Campaña informativa 04</strong><span>Video</span></figcaption>
+            <video controls autoplay muted loop playsinline preload="auto" poster="assets/publicidad/campana-04.jpg" aria-label="Campaña informativa 4"><source src="https://files.catbox.moe/kku6ii.mp4" type="video/mp4"></video>
           </figure>
           <figure class="campaign">
-            <video controls muted playsinline preload="metadata" poster="assets/publicidad/campana-05.jpg" aria-label="Campaña informativa 5"><source src="https://files.catbox.moe/9ymikj.mp4" type="video/mp4"></video>
-            <figcaption><strong>Campaña informativa 05</strong><span>Video</span></figcaption>
+            <video controls autoplay muted loop playsinline preload="auto" poster="assets/publicidad/campana-05.jpg" aria-label="Campaña informativa 5"><source src="https://files.catbox.moe/9ymikj.mp4" type="video/mp4"></video>
           </figure>
         </div>
         <p class="campaign-note">Las nuevas imágenes de producto se pueden organizar en <strong>assets/publicidad</strong> y añadir a esta sección.</p>
@@ -434,7 +422,6 @@
         <div class="section-head center">
           <p class="eyebrow">Dessavre en redes</p>
           <h2>Publicaciones recientes</h2>
-          <p class="lead">Una selección visual de la actividad más reciente del perfil de Dessavre.</p>
         </div>
         <div class="social-grid">
           <a class="post" href="https://www.instagram.com/asesor_dessavre/reel/Dcbqph2E3-A/" target="_blank" rel="noopener noreferrer">
@@ -459,7 +446,7 @@
           <div><p class="eyebrow">Hablemos de tu protección</p><h2>Una buena decisión comienza con una conversación clara.</h2><p>Cuéntanos qué quieres proteger y recibe orientación personal, sin compromiso.</p></div>
           <div class="contact-options">
             <a class="button light" href="https://api.whatsapp.com/send/?phone=5213334580616&amp;text=Hola,%20quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20los%20seguros." target="_blank" rel="noopener noreferrer">Enviar WhatsApp →</a>
-            <a class="button mail" href="mailto:asesordessavre@gmail.com">asesordessavre@gmail.com</a>
+            <a class="button mail" href="mailto:asesordessavre@gmail.com">Enviar Correo</a>
           </div>
         </div>
         <nav class="social-links" aria-label="Redes sociales">
@@ -478,6 +465,7 @@
     </div>
   </footer>
   <script>
+    document.querySelectorAll('.campaign video').forEach(video => video.play().catch(() => {}));
     document.getElementById('year').textContent = new Date().getFullYear();
     document.querySelectorAll('.mobile-menu a').forEach(link => link.addEventListener('click', () => link.closest('details').removeAttribute('open')));
   </script>
