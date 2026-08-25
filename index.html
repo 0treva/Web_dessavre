@@ -111,7 +111,7 @@
       background: var(--navy);
       border-radius: 14px;
     }
-    .brand-mark img { width: 100%; height: 100%; max-width: none; object-fit: cover; object-position: 42% center; mix-blend-mode: screen; }
+    .brand-mark img { width: 100%; height: 100%; max-width: none; object-fit: cover; object-position: center; mix-blend-mode: screen; }
     .brand small { display: block; margin-top: 4px; color: var(--muted); font-size: .66rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
     .desktop-nav { display: flex; align-items: center; gap: 28px; }
     .desktop-nav > a:not(.button) { color: #465064; font-size: .94rem; font-weight: 700; text-decoration: none; }
@@ -211,7 +211,6 @@
     .campaign.featured { grid-column: 1 / -1; }
     .campaign video { width: 100%; aspect-ratio: 16 / 9; background: #050d19; object-fit: cover; }
     .campaign.featured video { aspect-ratio: 2.4 / 1; }
-    .campaign-note { margin: 28px 0 0; color: #aebed0; font-size: .88rem; }
     .social { padding: 105px 0; background: var(--soft); }
     .social-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
     .post { overflow: hidden; background: var(--white); border: 1px solid var(--line); border-radius: 18px; text-decoration: none; transition: box-shadow .2s ease, transform .2s ease; }
@@ -237,7 +236,12 @@
     footer { color: #b8c4d2; background: #071527; }
     .footer-inner { min-height: 110px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
     .footer-inner p { margin: 0; font-size: .88rem; }
+    .footer-inner > p:first-child, .footer-inner > p:last-child { flex: 1; }
+    .footer-inner > p:last-child { text-align: right; }
     .footer-inner strong, .footer-inner a { color: var(--white); }
+    .footer-social { display: flex; flex-wrap: wrap; justify-content: center; gap: 16px; }
+    .footer-social a { color: #b8c4d2; font-size: .82rem; font-weight: 800; text-decoration: none; }
+    .footer-social a:hover { color: #ff7462; }
     @media (max-width: 900px) {
       .desktop-nav { display: none; }
       .mobile-nav { display: block; }
@@ -264,6 +268,8 @@
       .campaign.featured video { aspect-ratio: 16 / 9; }
       .contact-panel { padding: 30px 22px; border-radius: 22px; }
       .footer-inner { padding-block: 30px; flex-direction: column; align-items: flex-start; }
+      .footer-inner > p:last-child { text-align: left; }
+      .footer-social { justify-content: flex-start; }
     }
     @media (prefers-reduced-motion: reduce) {
       html { scroll-behavior: auto; }
@@ -414,7 +420,6 @@
             <video controls autoplay muted loop playsinline preload="auto" poster="assets/publicidad/campana-05.jpg" aria-label="Campaña informativa 5"><source src="https://files.catbox.moe/9ymikj.mp4" type="video/mp4"></video>
           </figure>
         </div>
-        <p class="campaign-note">Las nuevas imágenes de producto se pueden organizar en <strong>assets/publicidad</strong> y añadir a esta sección.</p>
       </div>
     </section>
     <section class="social" id="actualidad">
@@ -461,6 +466,12 @@
   <footer>
     <div class="container footer-inner">
       <p><strong>Asesores de Seguros Dessavre S.C.</strong><br>Construyendo tu tranquilidad, hoy y siempre.</p>
+      <nav class="footer-social" aria-label="Redes sociales en el pie de página">
+        <a href="https://www.facebook.com/FERDESSAVRE/?locale=es_LA" target="_blank" rel="noopener noreferrer">Facebook</a>
+        <a href="https://www.instagram.com/asesor_dessavre/" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a href="https://x.com/FERDESSAVRE" target="_blank" rel="noopener noreferrer">X</a>
+        <a href="https://www.linkedin.com/in/fernando-dessavre-d%C3%A1vila-a8569947/?originalSubdomain=mx" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      </nav>
       <p>© <span id="year">2026</span> Todos los derechos reservados. · <a href="#inicio">Volver arriba</a></p>
     </div>
   </footer>
